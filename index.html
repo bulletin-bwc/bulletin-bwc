@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - BWC</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <meta charset='utf-8' />
+  <title>Global Bio Labs</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+  <div id="mapbwc"></div>
+
+  <pre id="features"></pre>
+
+  <nav id="navBarbwc">
+    <div class="dropbtn">
+      <input id="activity" type="radio" name="radiogroup1" value="activity" onchange="updateScorecard()" checked />
+      <label for="activity">Current biological weapons activity<b id="activity"></b></label>
+    </div>
+
+    <div class="dropbtn">
+      <input id="historical" type="radio" name="radiogroup1" value="historical" onchange="updateScorecard()" />
+      <label for="historical">Historical biological weapons activity<b id="historical"></b></label>
+    </div>
+
+    <div class="dropbtn">
+      <input id="treaty" type="radio" name="radiogroup1" value="treaty" onchange="updateScorecard()" />
+      <label for="treaty">Biological Weapons Convention status</label>
+    </div>
+
+  </nav>
+
+  <div class="query-feat" id="query-feat">
+    <b><label id="country"></label></b>
+    <br>
+    <label id="act-fast"></label>
+    <label class="starthide" id="his-fast"></label>
+    <label class="starthide" id="trt-fast"></label>
+  </div>
+
+  <!-- legend -->
+  <div id='leg-act'>
+    <div id='legend' class='legend'>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background:#818181;'></span><br>No data</li>
+          <li><span style='background:#374c80;'></span>Neither pursues nor posesses</li>
+          <li><span style='background:#ef5675;'></span>Allegedly pursues</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id='leg-his'>
+    <div id='legend' class='legend'>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background:#818181;'></span>No data</li>
+          <li><span style='background:#374c80;'></span>Neither pursued nor posessed</li>
+          <li><span style='background:#7a5195;'></span>Allegedly pursued</li>
+          <li><span style='background:#bc5090;'></span>Pursued</li>
+          <li><span style='background:#ef5675;'></span>Allegedly posesssed</li>
+          <li><span style='background:#ff764a;'></span>Posessed</li>
+          <li><span style='background:#ffa600;'></span>Used</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id='leg-trt'>
+    <div id='legend' class='legend'>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background:#818181;'></span>No data</li>
+          <li><span style='background:#ffa600;'></span>Neither signed nor ratified</li>
+          <li><span style='background:#ef5675;'></span>Signed</li>
+          <li><span style='background:#374c80;'></span>Ratified</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
