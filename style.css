@@ -1,10 +1,11 @@
 #mapbwc {
   position: absolute;
-  width: 100%;
+  width: 40%;
+  left: 30%;
   height: 75%;
   margin: auto;
   top: 0px;
-  bottom: 0px;
+  bottom: 10%;
   justify-content: center;
   alighn-content: center;
 }
