@@ -1,22 +1,19 @@
-#mapbwc {
-  position: absolute;
+#map-bwc {
+  position: fixed;
   width: 100%;
-  top: 25%;
-  height: 500px;
-  margin: auto;
-  justify-content: center;
-  alighn-content: center;
+  height: 100%;
 }
+
 *,
 *:before,
 *:after {
   font-family: sans-serif;
-
   box-sizing: border-box;
 }
 
 #navBarbwc {
-  width: 100vw;
+  position: fixed;
+  width: 100%;
   margin-top: 1em;
   height: 30px;
   display: flex;
@@ -55,30 +52,15 @@ input[name="radiogroup1"]:checked + label {
   color: white;
 }
 
-h3 {
-  font-size: 18px;
-  line-height: 24px;
-  margin: 8px 8px 8px 8px;
-}
-p {
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 16px 0 16px;
-}
-
-.visible {
-  visibility: none;
-}
-
 #legend {
   margin: auto;
-  position: absolute;
+  position: fixed;
   width: 100%;
   display: flex;
-  bottom: 10px;
+  bottom: 7.5%;
   height: 30px;
   min-width: 50%;
-  padding: 50px;
+  padding: 0px;
   align-items: center;
   justify-content: center;
 }
@@ -106,6 +88,21 @@ p {
   margin-right: 100px;
   margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 40px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 60%;
+    list-style: none;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
 .legend ul.legend-labels li span {
   display: block;
   float: left;
@@ -113,6 +110,17 @@ p {
   width: 50px;
   margin: 8px 8px 8px 0px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 20px;
+    width: 25px;
+    margin: 8px 8px 8px 0px;
+  }
+}
+
 .legend a {
   color: #777;
 }
@@ -124,25 +132,11 @@ p {
   display: none;
 }
 
-/* popup */
-.popup {
-  max-width: 400px;
-  backdrop-filter: blur(8px);
-}
-
-.logos {
-  position: absolute;
-  opacity: 50%;
-  right: 10px;
-  bottom: 30px;
-  margin-right: 5px;
-}
-
 #query-feat {
   margin: auto;
   position: absolute;
   width: 50%;
-  top: 10%;
+  top: 20%;
   left: 25%;
   right: 25%;
   align-items: center;
