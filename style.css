@@ -48,7 +48,7 @@ input[name="radiogroup1"] + label {
 
 input[name="radiogroup1"]:checked + label {
   /* style checked state as you like */
-  background-color: #3275f6;
+  background-color: #843ACF;
   color: white;
 }
 
